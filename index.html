@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rei do Açaí</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #2b0040;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #4b0082;
+}
+
+h1 {
+    margin: 0;
+    color: #aaff00;
+}
+
+.container {
+    padding: 15px;
+}
+
+.card {
+    background: #3c0066;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #aaff00;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Rei do Açaí</h1>
+    <p>Uma explosão de sabor e energia!</p>
+</header>
+
+<div class="container">
+
+    <h2>🍧 Açaís</h2>
+
+    <div class="card">
+        <h3>Açaí 300ml</h3>
+        <p>Cremoso + 2 adicionais</p>
+        <p><strong>R$ 10,00</strong></p>
+        <button onclick="pedir('Açaí 300ml')">Pedir no WhatsApp</button>
+    </div>
+
+    <div class="card">
+        <h3>Açaí 500ml</h3>
+        <p>Cremoso + 3 adicionais</p>
+        <p><strong>R$ 15,00</strong></p>
+        <button onclick="pedir('Açaí 500ml')">Pedir no WhatsApp</button>
+    </div>
+
+    <h2>🌭 Lanches</h2>
+
+    <div class="card">
+        <h3>Hot Dog</h3>
+        <p>Completo</p>
+        <p><strong>R$ 8,00</strong></p>
+        <button onclick="pedir('Hot Dog')">Pedir no WhatsApp</button>
+    </div>
+
+</div>
+
+<script>
+function pedir(produto) {
+    let numero = "5519988776655"; // COLOCA O WHATS DO CLIENTE
+    let mensagem = `Olá, quero pedir: ${produto}`;
+    let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
